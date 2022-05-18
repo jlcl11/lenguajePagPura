@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #centrar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #todoCuadro1,
+        #todoCuadro2,
+        #todoCuadro3 {
+            padding: 30px;
+            background-image: url("https://w0.peakpx.com/wallpaper/991/1011/HD-wallpaper-3d-black-texture-geometric-black-texture-black-abstraction-background-3d-abstraction-black-texture-creative-black-background.jpg");
+            width: 820px;
+            column-count: 2;
+        }
+
+        #cuadro4 {
+            padding: 30px;
+            width: 820px;
+            column-count: 2;
+        }
+
+        #separador1,
+        #separador2 {
+            height: 100px;
+        }
+
+        #separador3 {
+            height: 50px;
+        }
+
+        #img1,
+        #img3 {
+            width: 400px;
+            padding-top: 15px;
+        }
+
+        #img2 {
+            width: 250px;
+            padding-top: 15px;
+            margin-left: 75px;
+        }
+
+        #boton11,
+        #boton12,
+        #boton21,
+        #boton31,
+        #boton32 {
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-width: 1px;
+            border-style: solid;
+            border-color: white;
+            border-radius: 50px;
+            margin-left: 120px;
+        }
+
+        #boton41,
+        #boton42 {
+            margin-left: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-width: 1px;
+            border-style: solid;
+            border-color: white;
+            border-radius: 50px;
+            margin-left: 120px;
+            font-size: 150%;
+        }
+
+        #boton11,
+        #boton21,
+        #boton31 {
+            margin-bottom: 10px;
+        }
+
+        h2,
+        p,
+        a {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h2 {
+            color: white;
+            text-shadow: 5px 5px 4px rgba(192, 176, 176, 0.537);
+            transition: all 1.5s ease;
+            -webkit-transition: all 1.5s ease;
+        }
+
+        h2:hover {
+            color: rgb(255, 4, 4);
+            text-shadow: 5px 5px 4px rgb(148, 28, 28);
+        }
+
+        h2::before {
+            transition: all 1.5s ease;
+            -webkit-transition: all 1.5s ease;
+        }
+
+        #cuadro2>h2:nth-of-type(1) {
+            padding-top: 90px;
+        }
+
+        #cuadro3>h2:nth-of-type(1) {
+            padding-top: 20px;
+        }
+
+        p {
+            color: white;
+            transition: all 1.5s ease;
+            -webkit-transition: all 1.5s ease;
+            text-decoration: underline black;
+        }
+
+        p::first-letter {
+            font-weight: bold;
+            font-style: italic;
+            color: red;
+        }
+
+        p:hover {
+            text-decoration: underline red;
+        }
+
+        a {
+            color: white;
+        }
+
+        .ventana1,
+        .ventana3 {
+            background-color: rgba(0, 0, 0, .8);
+            transition: all 1s;
+            position: fixed;
+            pointer-events: none;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            transition: all 2s;
+        }
+
+        #ventanaModal1:target,
+        #ventanaModal3:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .contenido1,
+        .contenido3 {
+            background-color: rgba(246, 110, 110, 0);
+            position: relative;
+            width: 50%;
+            padding: 5px 50px;
+            margin: 4% auto;
+        }
+
+        #span {
+            color: red;
+        }
+
+        #x1,
+        #x3 {
+            display: flex;
+            font-size: 200%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: red;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #gifbal1,
+        #gifbal3 {
+            width: 100%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: white;
+        }
+
+        #cuadroModos {
+            padding: 30px;
+            width: 80px;
+            column-count: 2;
+        }
+
+        #botonesColores {
+            background-color: black;
+
+        }
+
+        #flechaArriba {
+            padding: 30px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+      #container:target{
+          background-color: black;
+      }
+    </style>
+</head>
+
+<body>
+
+    <div id="centrar">
+
+        <div id="container">
+          
+            <div id="modos">
+                <section class="irArriba">
+                    <section id="flechaArriba">
+                        <a href="#container"> 🌙</a>
+                        <a href="#"> ☀️</a>
+                    </section>
+            </div>
+
+            <div id="todoCuadro1">
+                <img id="img1"
+                    src="https://library.sportingnews.com/styles/twitter_card_120x120/s3/2021-08/kawhi-leonards-series-clinching-shot-vs-the-76ers-in-2019_1d97e1tfv50xg175weqoiju9b8.jpeg?itok=nOvdNgdC" />
+                <div id="cuadro1">
+                    <h2>¡Descubre los resultados de los partidos de temporada regular y playoffs!</h2>
+                    <p>Descubre crónicas de lo partidos más importantes de la jornada.</h2>
+                    <section class="botones1">
+                        <section id="boton11">
+                            <a href="https://2022proyectolmnba.000webhostapp.com/category/noticias/resultados"
+                                id="pinchaAqui11">Ver Resultados</a>
+                        </section>
+                        <section id="boton12">
+                            <a id="pinchaAqui12" href="#ventanaModal1">Ver Jugada</a>
+                        </section>
+                        <section id="ventanaModal1" class="ventana1">
+                            <section class="contenido1">
+                                <span>
+                                    <a id="x1" href="#">X</a>
+                                    <img id="gifbal1"
+                                        src="https://c.tenor.com/nySJZRbBO_sAAAAd/kawhi-kawhi-leonard.gif">
+                                </span>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+            </div>
+            <div id="separador1">
+
+            </div>
+            <div id="todoCuadro2">
+                <img id="img2"
+                    src="https://vcphoops.com/wp-content/uploads/2022/03/Nets-need-Ben-Simmons-to-make-deep-playoff-run-says.jpeg" />
+                <div id="cuadro2">
+                    <h2>¡Descubre los últimos traspasos!</h2>
+                    <p>Visita nuestro apartado de traspasos para enterarte de los movimientos de la agencia libre y los
+                        últimos trades.</h2>
+                    <section class="botones2">
+                        <section id="boton21">
+                            <a href="https://2022proyectolmnba.000webhostapp.com/category/noticias/traspasos"
+                                id="pinchaAqui21">Ver Traspasos</a>
+                        </section>
+                    </section>
+                </div>
+            </div>
+            <div id="separador2">
+
+            </div>
+            <div id="todoCuadro3">
+                <img id="img3"
+                    src="https://ak.uecdn.es/p/110/thumbnail/entry_id/0_hp2wrkme/width/990/cache_st/20160228213826/type/2/bgcolor/000000/0_hp2wrkme.jpg" />
+                <div id="cuadro3">
+                    <h2>¡Noticias de la liga!</h2>
+                    <p>Entérate de las últimas reuniones de la liga y los últimos sucesos.</h2>
+                    <section class="botones3">
+                        <section id="boton31">
+                            <a href="https://2022proyectolmnba.000webhostapp.com/landing-page" id="pinchaAqui31">Ver
+                                Noticias</a>
+                        </section>
+                        <section id="boton32">
+                            <a id="pinchaAqui32" href="#ventanaModal3">Ver Jugada</a>
+                        </section>
+                        <section id="ventanaModal3" class="ventana3">
+                            <section class="contenido3">
+                                <span>
+                                    <a id="x3" href="#">X</a>
+                                    <img id="gifbal3" src="https://i.gifer.com/G8hL.gif">
+                                </span>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+            </div>
+       
+            <div id="cuadro4">
+                <section class="botones4">
+                    <section id="boton41">
+                        <a href="https://2022proyectolmnba.000webhostapp.com/sobre-nosotros"
+                            id="pinchaAqui41">¡Conócenos!</a>
+                    </section>
+                    <section id="boton42">
+                        <a href="https://2022proyectolmnba.000webhostapp.com/contactanos"
+                            id="pinchaAqui42">¡Contáctanos!</a>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
