@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pagina Pura Marcos y Jose Corral</title>
     <style>
         #centrar {
             display: flex;
@@ -191,6 +191,11 @@
             justify-content: center;
         }
 
+         /*
+            Declaracion del estilo de 2 de los gifs de las ventanas modales. (Primer gif y tercero)
+            A cada uno, se le aplica el width 100% para que ocupen toda la ventana modal, 
+            y se les aplica un borde con 5 px de ancho, con color blanco y solid.
+        */
         #gifbal1,
         #gifbal3 {
             width: 100%;
@@ -199,32 +204,38 @@
             border-color: white;
         }
 
-        #cuadroModos {
-            padding: 30px;
-            width: 80px;
-            column-count: 2;
-        }
-
-        #botonesColores {
-            background-color: black;
-
-        }
-
+        /*
+        Declaracion del estilo del contenedor de los caracteres del soy y la luna del modo noche y dia.
+        Aplicamos un padding de 30px, y usamos row reverse (coloca los elementos horizontalmente, peor al reves.)
+        */
         #flechaArriba {
             padding: 30px;
             display: flex;
             flex-direction: row-reverse;
+
         }
 
+        /*
+        Declaracion del estido al container que tiene los simbolos del sol y la luna, para que cuando el body sea target (cuando se clicke en la luna),
+        el fondo sea negro, simulado un modo noche.
+        */
         #container:target{
             background-color: black;
         }
 
+        /*
+        Declaracion de estilo para los p y h2, para que ambos tengan una duracion de animacion de 2.5 segundos, 
+        y para que ambos usen la animacion "slidein".
+        */
         p, h2 {
             animation-duration: 2.5s;
             animation-name: slidein;
         }
 
+        /*
+        Declaracion de animacion para la marca (p,h2) que la use, empiezara con un margin-left:100,
+        y se dirija hasta la parte derecha de la imagen de ese contenedor.
+        */
         @keyframes slidein {
             from {
                 margin-left: 100%;
@@ -237,34 +248,70 @@
             }
         }
 
+        /*
+        Declaracion de estilo para la img1, para que cuando el raton este por encima de esta, 
+        rote 180 grados en el eje Y.
+        */
         #img1:hover {
-            transform: rotateY(180deg);transition: 1.5s;
+            transform: rotateY(180deg);
         }
 
+        /*
+        Declaracion de estilo para la img1, para que las transiciones que se realicen sobre esta, tarden en realizarse 1.5s.
+        */
         #img1 {
             transition: 1.5s;
         }
 
+        /*
+        Declaracion de estilo para la img2, para que cuando el raton este por encima de esta, 
+        rote 180 grados en el eje Y.
+        */
         #img2:hover {
-            transform: rotateY(180deg);transition: 1.5s;
+            transform: rotateY(180deg);
         }
 
+        /*
+        Declaracion de estilo para la img2, para que las transiciones que se realicen sobre esta, tarden en realizarse 1.5s.
+        */
         #img2 {
             transition: 1.5s;
         }
 
+        /*
+        Declaracion de estilo para la img3, para que cuando el raton este por encima de esta, 
+        rote 180 grados en el eje Y.
+        */
+        #img3:hover {
+            transform: rotateY(180deg);
+        }
+
+        /*
+        Declaracion de estilo para la img3, para que las transiciones que se realicen sobre esta, tarden en realizarse 1.5s.
+        */
+        #img3 {
+            transition: 1.5s;
+        }
+
+        /*
+        Declaracion de estilo para el cuadro de texto donde se insertara el texto se coloque en la posicion donde le 
+        corresponda con justify-content: end.
+        */
         #mensaje {
             display: flex;
             justify-content:end;
-
         }
 
+        /*
+        Declaracion de estilo para el texto en el que se pondra lo que escribamos en el cuadro de texto,
+        este tendra un color blanco, las animaciones que se realicen en esta duraran 3 segundos, usara la animacion latido infinitamente,
+        estara centrado, y tendra un margin superior e inferior de 20 px.
+        */
         #animacion {
             color: white;
             animation-duration: 3s;
             animation-name: latido;
             animation-iteration-count: infinite;
-            animation-direction: alternate;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -272,7 +319,11 @@
             margin-bottom: 20px;
         }
 
-        
+        /*
+        Declaracion de animacion para la marca (#animacion) que la use, empezara con un tamaño de fuente del 150%,
+        cuando va porl el 50% de la animacion, se le sumara un 50% mas de tamaño a la fuente, y sera de color rojo, al llegar al final,
+        volvera a tener un tamaño de fuente del 150%.
+        */
         @keyframes latido {
             from {
                 font-size: 150%;
@@ -288,14 +339,12 @@
             }
         }
 
-        #img4 {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
+        /*
+        Declaracion de estilo para imagenesHover, 
+        contenedor donde estan contenidas img3 e img4, donde se le aplica un width: 100% al contenedor.
+        */
         #imagenesHover {
-            width: 100%
+            display: inline-block;
         }
 
         #img3 {
@@ -304,18 +353,29 @@
             height: 100%;
         }
 
+        
+        /*
+        Declaracion de estilo para la img4, esta tendra un 100% de alto y ancho en su contenedor, 
+        donde se tendra una escala de 0.2, una opacidad de 0.3 y las transiciones que se hagan sobre esta, tardaran 1s.
+        */
         #img4 {
             /* puesto aquí hace que la transición sea suave al ponerse y quitarse */
-            transition: all 4s ease;
+            transition: all 1s ease;
 
             /* a lo lejos el avión se ve pequeño y opacado */
             transform: scale(0.2);
-            opacity: 0.2;
+            opacity: 0.3;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
+        /*
+        Declaracion del estilo para la img4, en la que cuando se pase el raton por encima, la imagen aumente 0.7 su escala, rote 700 grados y tenga una opacidad de 1.
+        */
         #imagenesHover:hover #img4 {
             /* efectos escala, giro y quitamos opacidad */
-            transform: scale(4) rotate(390deg);
+            transform: scale(0.9) rotate(700deg);
             opacity: 1;
         }
 
@@ -323,11 +383,13 @@
 </head>
 
 <body>
-
+    <!--Creacion del div centrar. (Sirve para centrar los elementos.)-->
     <div id="centrar">
 
+        <!--Creacion del div container. (Tiene todos los elementos dentro.)-->
         <div id="container">
           
+            <!--Creacion del div modos. (Sirve para colocar los elementos para usar el modo noche.)-->
             <div id="modos">
                 <section class="irArriba">
                     <section id="flechaArriba">
@@ -336,21 +398,26 @@
                     </section>
             </div>
 
-            
+            <!--Creacion del area de texto, en el que escribiremos el texto que se cambiara la etiqueta #mensaje, segun lo que pongamos en el area.-->
             <textarea id="mensaje" rows="4" cols="30">Inserte Texto</textarea>
+            <!--Creacion de boton que servira para actualizar el texto de la etiqueta #mensaje.-->
             <button onclick="actualizar()">ACEPTAR</button>
 
+            <!--Creacion de la etiqueta p, cuyo texto sera sustiuido por el que se escribio en el area de texto superior.-->
             <div id="animacion">
                 Inserte texto en el cuadro izquierdo.
             </div>
 
+            <!--Creacion del container 1, que tendra una imagen, un boton para ver resultados, otro para ver una ventana modal y texto normal.-->
             <div id="todoCuadro1">
                 <img id="img1"
                     src="https://library.sportingnews.com/styles/twitter_card_120x120/s3/2021-08/kawhi-leonards-series-clinching-shot-vs-the-76ers-in-2019_1d97e1tfv50xg175weqoiju9b8.jpeg?itok=nOvdNgdC" />
-                <div id="cuadro1">
+                <!--Creacion del container que contendra texto y botones.-->
+                    <div id="cuadro1">
                     <h2>¡Descubre los resultados de los partidos de temporada regular y playoffs!</h2>
                     <p>Descubre crónicas de lo partidos más importantes de la jornada.</h2>
-                    <section class="botones1">
+                    <!--Creacion del container que tendra los botones del container todoCuadro1.-->
+                        <section class="botones1">
                         <section id="boton11">
                             <a href="https://2022proyectolmnba.000webhostapp.com/category/noticias/resultados"
                                 id="pinchaAqui11">Ver Resultados</a>
@@ -358,6 +425,7 @@
                         <section id="boton12">
                             <a id="pinchaAqui12" href="#ventanaModal1">Ver Jugada</a>
                         </section>
+                        <!--Creacion de la ventana modal de todoCuadro1.-->
                         <section id="ventanaModal1" class="ventana1">
                             <section class="contenido1">
                                 <span>
@@ -373,13 +441,16 @@
             <div id="separador1">
 
             </div>
+             <!--Creacion del container 2, que tendra una imagen, un boton para ver traspasos y texto normal.-->
             <div id="todoCuadro2">
                 <img id="img2"
                     src="https://vcphoops.com/wp-content/uploads/2022/03/Nets-need-Ben-Simmons-to-make-deep-playoff-run-says.jpeg" />
-                <div id="cuadro2">
+                <!--Creacion del container que contendra texto y un boton.-->
+                    <div id="cuadro2">
                     <h2>¡Descubre los últimos traspasos!</h2>
                     <p>Visita nuestro apartado de traspasos para enterarte de los movimientos de la agencia libre y los
                         últimos trades.</h2>
+                        <!--Creacion del container que tendra los botones del container todoCuadro2.-->
                     <section class="botones2">
                         <section id="boton21">
                             <a href="https://2022proyectolmnba.000webhostapp.com/category/noticias/traspasos"
@@ -391,15 +462,19 @@
             <div id="separador2">
 
             </div>
+            <!--Creacion del container 3, que tendra una imagen, un boton para ver resultados, otro para ver una ventana modal y texto normal.-->
             <div id="todoCuadro3">
+                <!--Creacion del container que tendra la img3 y la img4.-->
                 <div id="imagenesHover">
                     <img id="img3"
                         src="https://ak.uecdn.es/p/110/thumbnail/entry_id/0_hp2wrkme/width/990/cache_st/20160228213826/type/2/bgcolor/000000/0_hp2wrkme.jpg" />
                     <img id="img4" src="https://assets.stickpng.com/images/580b585b2edbce24c47b2ad6.png"/>
                 </div>
+                <!--Creacion del container que contendra texto y botones.-->
                     <div id="cuadro3">
                     <h2>¡Noticias de la liga!</h2>
                     <p>Entérate de las últimas reuniones de la liga y los últimos sucesos.</h2>
+                     <!--Creacion del container que tendra los botones del container todoCuadro3.-->
                     <section class="botones3">
                         <section id="boton31">
                             <a href="https://2022proyectolmnba.000webhostapp.com/landing-page" id="pinchaAqui31">Ver
@@ -408,6 +483,7 @@
                         <section id="boton32">
                             <a id="pinchaAqui32" href="#ventanaModal3">Ver Jugada</a>
                         </section>
+                        <!--Creacion de la ventana modal de todoCuadro3.-->
                         <section id="ventanaModal3" class="ventana3">
                             <section class="contenido3">
                                 <span>
@@ -419,8 +495,10 @@
                     </section>
                 </div>
             </div>
-       
+
+            <!--Creacion del container 4, que tendra un boton para ver la pestaña Conocenos, y otro boton para ver la pestaña Contactanos.-->
             <div id="cuadro4">
+                <!--Creacion del container que tendra ambos botones.-->
                 <section class="botones4">
                     <section id="boton41">
                         <a href="https://2022proyectolmnba.000webhostapp.com/sobre-nosotros"
@@ -436,6 +514,9 @@
     </div>
 
     <script>
+        /*
+        Funcion que btiene el texto del area de texto (#mensaje), y se lo coloca a #animacion.
+        */
         function actualizar() {
             document.getElementById("animacion").innerHTML = document.getElementById("mensaje").value;
         }
